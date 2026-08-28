@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+
+    <!-- Google Fonts: Inter for clean, modern typography -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <main class="container">
+
+      <!-- App Header -->
+      <header class="app-header">
+        <h1 class="app-title">My To-Do List</h1>
+        <!-- Task counter: shows how many tasks are left -->
+        <p class="task-counter" id="taskCounter">0 tasks remaining</p>
+      </header>
+
+      <!-- Input Section -->
+      <section class="input-section" aria-label="Add a new task">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="Add a new task..."
+          aria-label="Task name"
+          maxlength="200"
+        />
+        <button id="addBtn" class="btn btn-add" aria-label="Add task">
+          Add Task
+        </button>
+      </section>
+
+      <!-- Task List Section -->
+      <section class="list-section" aria-label="Task list">
+        <!-- Empty state message -->
+        <p class="empty-message" id="emptyMessage">
+          No tasks yet. Add one above!
+        </p>
+
+        <!-- Tasks are injected here by JavaScript -->
+        <ul class="task-list" id="taskList" aria-live="polite"></ul>
+      </section>
+
+    </main>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
